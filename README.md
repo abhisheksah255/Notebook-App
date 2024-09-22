@@ -1,19 +1,43 @@
 # Notebook
 
-This is a Kotlin Multiplatform project that targets Android and iOS, allowing you to write and share code between the two platforms.
+**Notebook** is a Kotlin Multiplatform app built with Clean Architecture and MVVM pattern, providing a seamless experience for both Android and iOS users.
 
-## Project Structure
+## Key Features:
+- **Different Color Contrast Support**: Enhances accessibility by offering multiple color contrasts.
+- **Dynamic Color (Android)**: Adapts UI colors based on user preferences.
 
-The project is structured as follows:
+## Technologies Used:
+1. **SQLDelight**: Local database.
+2. **DataStore Preferences**: For small data storage.
+3. **Compose Navigation 2.8.0**: Type-safe navigation.
+4. **Koin**: Dependency injection.
+5. **Material 3**: Modern UI and architecture.
+6. **Kotlin Serialization**: Efficient data parsing.
+7. **Coroutines**: For async tasks.
 
-- **`composeApp`:** This module contains the shared code for both Android and iOS. It uses Kotlin Multiplatform to write code that can be compiled for both platforms.
-    - **`commonMain`:** Contains code that is common to both platforms.
-    - **`androidMain`:** Contains Android-specific code.
-    - **`iosMain`:** Contains iOS-specific code.
-- **`androidApp`:** This module contains the Android application. It uses Jetpack Compose for the user interface and depends on the `shared` module for the core logic.
-- **`iosApp`:** This module contains the iOS application. It uses SwiftUI for the user interface and depends on the `shared` module for the core logic.
+## App Usage:
+- **Notes Management**: Easily create, update, and delete notes.
+- **Dynamic UI**: Adjust UI colors based on preferences.
+- **Accessibility**: Multiple color contrasts for better readability.
 
+## How to Run:
 
-This project demonstrates how to build a cross-platform application using Kotlin Multiplatform, sharing code between Android and iOS while using the native UI frameworks for each platform (Jetpack Compose and SwiftUI).
+### Android (via Play Store):
+Download the app from [Google Play Store](#).
 
+### iOS (via TestFlight):
+Install the app through [TestFlight](#).
 
+## Cloning Guide:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/prashant17d97/Notebook.git
+   ```
+2. Open in Android Studio (Android) or Xcode (iOS).
+3. Sync dependencies and build.
+
+## Connect with Me:
+For feedback, collaboration, or inquiries, connect with me on:
+- [GitHub](https://github.com/prashant17d97)
+- [LinkedIn](https://www.linkedin.com/in/prashantsingh-dev/)
+- [Email](mailto:prashantsinghsca@gmail.com)
