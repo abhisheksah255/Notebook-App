@@ -8,7 +8,6 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
     alias(libs.plugins.serialization.plugin) apply false
-    id("org.jetbrains.kotlin.android")
     id("jacoco") // ✅ Add JaCoCo plugin here
 }
 
