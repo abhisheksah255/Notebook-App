@@ -1,0 +1,42 @@
+name: Build KMP Project (Swift + Android)
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:  
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Swift Build
+    - name: Build Swift project
+      run: swift build -v
+
+    - name: Run Swift tests
+      run: swift test -v
+
+    # Android Setup
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: 17
+
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
+
+    - name: Build Android app
+      run: ./gradlew :androidApp:assembleDebug
+
+    - name: Run Android tests
+      run: ./gradlew :common:allTests
