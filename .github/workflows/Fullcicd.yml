@@ -1,6 +1,10 @@
-name: Android KMP CI
+name: Android KMP CI/CD 
 
 on:
+  # push:
+  #   branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
   workflow_dispatch:
 
 env:
